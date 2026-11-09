@@ -5,7 +5,8 @@ const path = require("node:path");
 const { DatabaseSync } = require("node:sqlite");
 const { hashPassword } = require("./security");
 
-const DATA_DIR = path.join(__dirname, "data");
+/* На Vercel запись возможна только в /tmp; локально — папка data рядом с кодом. */
+const DATA_DIR = process.env.VERCEL ? "/tmp" : path.join(__dirname, "data");
 const DB_PATH = process.env.DB_PATH || path.join(DATA_DIR, "paradox.db");
 
 if (DB_PATH !== ":memory:") {

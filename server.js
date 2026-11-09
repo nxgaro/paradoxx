@@ -968,14 +968,18 @@ db.prepare("DELETE FROM sessions WHERE expires_at <= ?").run(Date.now());
 setInterval(() => {
   db.prepare("DELETE FROM sessions WHERE expires_at <= ?").run(Date.now());
 }, 60 * 60 * 1000).unref();
+if (require.main === module) {
+  app.listen(PORT, () => {
+    const adminEmail = (process.env.ADMIN_EMAIL || "admin@paradox.kz").trim().toLowerCase();
+    console.log("");
+    console.log(`  Paradox запущен: http://localhost:${PORT}`);
+    console.log(`  Встроенный админ: ${adminEmail}`);
+    console.log(
+      `  Пароль админа: ${process.env.ADMIN_PASSWORD ? "из переменной ADMIN_PASSWORD" : "admin123"}`
+    );
+    console.log("");
+  });
+}
 
-app.listen(PORT, () => {
-  const adminEmail = (process.env.ADMIN_EMAIL || "admin@paradox.kz").trim().toLowerCase();
-  console.log("");
-  console.log(`  Paradox запущен: http://localhost:${PORT}`);
-  console.log(`  Встроенный админ: ${adminEmail}`);
-  console.log(
-    `  Пароль админа: ${process.env.ADMIN_PASSWORD ? "из переменной ADMIN_PASSWORD" : "admin123"}`
-  );
-  console.log("");
-});
+/* Экспорт для serverless-окружения (Vercel): app.require как обработчик запросов. */
+module.exports = app;
