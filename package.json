@@ -1,0 +1,17 @@
+{
+  "name": "paradox",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Paradox — платформа задач для студентов и малого бизнеса. Сайт + API аккаунтов, ролей и задач.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности — Paradox</title>
+  <meta name="description" content="Какие данные собирает Paradox, зачем и сколько их хранит.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Paradox</span><span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__tag">разрываем круг опыта</span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="index.html">На главную</a>
+        <a href="faq.html">Вопросы и ответы</a>
+        <a href="login.html" class="site-nav__cta">Кабинет</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="doc section">
+      <div class="container">
+        <p class="kicker">Документ · черновик пилота</p>
+        <h1 class="doc__title">Политика конфиденциальности</h1>
+        <p class="doc__lead">Действует для сайта paradox и его персональных данных, обрабатываемых в рамках пилота. Редакция от 06.11.2026.</p>
+
+        <div class="doc__body">
+          <h2>1. Кто обрабатывает данные</h2>
+          <p>Paradox — студенческий проект (кейс «The Experience Gap», хакатон, ноябрь 2026). Обработку данных на этапе пилота ведёт команда проекта. Контакт для вопросов о данных появится на этой странице до выхода из пилота.</p>
+
+          <h2>2. Какие данные мы собираем</h2>
+          <ul>
+            <li><strong>Аккаунт:</strong> имя, email, опционально название компании, хеш пароля (scrypt, восстановлению не подлежит).</li>
+            <li><strong>Роль:</strong> пользователь, потребитель или администратор; от роли зависит, что можно делать в кабинете.</li>
+            <li><strong>Контент:</strong> тексты задач, отклики, чек-листы приёмки, статусы работ, оценки в личном кабинете.</li>
+            <li><strong>Сессия:</strong> cookie <code>paradox_sid</code> — HttpOnly, не читается скриптами, живёт до 7 дней и нужна только для входа.</li>
+          </ul>
+
+          <h2>3. Зачем нам эти данные</h2>
+          <ul>
+            <li>Завести аккаунт и отличать вас от других участников.</li>
+            <li>Показывать задачи, подходящие по навыкам, и вести историю откликов.</li>
+            <li>Дать заказчику приёмку результата и защитить от дублей откликов.</li>
+            <li>Дать администратору возможность управлять ролями и модерировать задачи.</li>
+          </ul>
+          <p>Мы не рассылаем рекламу, не продаём и не передаём данные третьим лицам для их целей.</p>
+
+          <h2>4. Третьи стороны</h2>
+          <p>Сайт подключает шрифты Google Fonts, поэтому при загрузке страниц браузер отправляет Google ваш IP-адрес и пользовательский агент. Больше внешних сервисов сайт не использует. База данных (SQLite) хранится на сервере пилота и наружу не доступна.</p>
+
+          <h2>5. Сколько храним</h2>
+          <p>Данные аккаунта и откликов хранятся, пока существует аккаунт. Недействительные сессии мы удаляем автоматически. Демо-задачи и пилотные цифры могут использоваться на лендинге в обезличенном виде — имена компаний там вымышлены.</p>
+
+          <h2>6. Ваши права</h2>
+          <ul>
+            <li>Посмотреть, что мы о вас храним, — основные данные видны в личном кабинете.</li>
+            <li>Изменить имя и компанию — в кабинете.</li>
+            <li>Удалить аккаунт и все свои данные — на этапе пилота по запросу команде проекта; удаление «одной кнопкой» запланировано после пилота.</li>
+          </ul>
+
+          <h2>7. Ограничения пилота</h2>
+          <p>Это прототип для хакатона: честно фиксируем, что часть процессов (например, самостоятельное восстановление доступа и удаление аккаунта) ещё не готова. Полный юридический текст будет подготовлен к выходу из пилота. И обычная осторожность: не пишите в задачи и отклики данные, которые не готовы доверить платформе.</p>
+
+          <h2>8. Изменения</h2>
+          <p>Об изменениях этой политики мы сообщаем на этой же странице и меняем дату редакции.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="container site-footer__inner">
+      <p class="site-footer__mark">Paradox<span class="brand__dot" aria-hidden="true"></span></p>
+      <p class="site-footer__meta">Политика конфиденциальности · <a href="index.html">на главную</a> · <a href="faq.html">вопросы и ответы</a> · <a href="terms.html">условия</a></p>
+    </div>
+  </footer>
+  <script src="file-guard.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход и регистрация — Paradox</title>
+  <meta name="description" content="Войдите в Paradox или создайте аккаунт. Роли: пользователь, потребитель, администратор.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Paradox</span><span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__tag">разрываем круг опыта</span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="index.html">На главную</a>
+        <a href="login.html" class="site-nav__cta">Войти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="auth-page">
+    <div class="container auth-page__inner">
+      <section class="auth-copy" aria-labelledby="auth-copy-title">
+        <p class="kicker">Аккаунт Paradox</p>
+        <h1 class="auth-copy__title" id="auth-copy-title">Одна платформа —<br><em>три роли</em></h1>
+        <p class="auth-copy__lead">
+          Регистрация сразу открывает личный кабинет. Роль «Потребитель» выдаёт
+          администратор — после этого можно публиковать задачи.
+        </p>
+
+        <ul class="role-list">
+          <li class="role-list__item">
+            <span class="role-badge role-badge--user">Пользователь</span>
+            <p>Смотрит открытые задачи, откликается на них и следит за статусом своих откликов.</p>
+          </li>
+          <li class="role-list__item">
+            <span class="role-badge role-badge--consumer">Потребитель</span>
+            <p>Создаёт задачи через форму, получает отклики и выбирает исполнителя.</p>
+          </li>
+          <li class="role-list__item">
+            <span class="role-badge role-badge--admin">Админ</span>
+            <p>Управляет ролями, задачами и откликами. Видит всю платформу.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="auth-card" aria-labelledby="auth-card-title">
+        <div class="auth-tabs" role="tablist" aria-label="Вход или регистрация">
+          <button type="button" class="auth-tab is-active" id="tab-login" role="tab"
+                  aria-selected="true" aria-controls="login-form" data-tab="login">Вход</button>
+          <button type="button" class="auth-tab" id="tab-register" role="tab"
+                  aria-selected="false" aria-controls="register-form" data-tab="register">Регистрация</button>
+        </div>
+
+        <h2 class="auth-card__title" id="auth-card-title">Войти в кабинет</h2>
+
+        <form class="auth-form" id="login-form" novalidate>
+          <div class="field">
+            <label class="field__label" for="login-email">Email</label>
+            <input class="field__input" id="login-email" name="email" type="email"
+                   autocomplete="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label class="field__label" for="login-password">Пароль</label>
+            <input class="field__input" id="login-password" name="password" type="password"
+                   autocomplete="current-password" required minlength="8" placeholder="Минимум 8 символов">
+          </div>
+          <p class="form-message" id="form-message" role="alert" hidden></p>
+          <button class="btn btn--primary auth-form__submit" type="submit">Войти</button>
+        </form>
+
+        <form class="auth-form" id="register-form" novalidate hidden>
+          <div class="field">
+            <label class="field__label" for="register-name">Имя</label>
+            <input class="field__input" id="register-name" name="name" type="text"
+                   autocomplete="name" required minlength="2" placeholder="Как к вам обращаться">
+          </div>
+          <div class="field">
+            <label class="field__label" for="register-email">Email</label>
+            <input class="field__input" id="register-email" name="email" type="email"
+                   autocomplete="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label class="field__label" for="register-company">Компания <span class="field__hint">— необязательно</span></label>
+            <input class="field__input" id="register-company" name="company" type="text"
+                   autocomplete="organization" placeholder="Если вы заказчик">
+          </div>
+          <div class="field">
+            <label class="field__label" for="register-password">Пароль</label>
+            <input class="field__input" id="register-password" name="password" type="password"
+                   autocomplete="new-password" required minlength="8" placeholder="Минимум 8 символов">
+          </div>
+          <div class="field">
+            <label class="field__label" for="register-password2">Повторите пароль</label>
+            <input class="field__input" id="register-password2" name="password2" type="password"
+                   autocomplete="new-password" required minlength="8" placeholder="Ещё раз">
+          </div>
+          <p class="form-message" id="register-message" role="alert" hidden></p>
+          <button class="btn btn--primary auth-form__submit" type="submit">Создать аккаунт</button>
+          <p class="auth-form__note">После регистрации вы получите роль «Пользователь». Роль «Потребитель» выдаёт администратор.</p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="file-guard.js" defer></script>
+  <script src="login.js" defer></script>
+</body>
+</html>

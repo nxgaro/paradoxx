@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Подбор задачи — Paradox</title>
+  <meta name="description" content="Отметьте навыки — Paradox сверит их с реальными задачами малого бизнеса Казахстана и покажет процент совпадения.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Paradox</span><span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__tag">разрываем круг опыта</span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="index.html">На главную</a>
+        <a href="dashboard.html" class="site-nav__cta">Кабинет</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="demo section" id="demo">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker">Подбор задачи</p>
+          <h2 class="section__title">Отметьте навыки — покажем подходящие задачи</h2>
+          <p class="section__lead">
+            Модель сверяет ваш профиль навыков с реальными задачами малого бизнеса
+            Казахстана и показывает процент совпадения с объяснением.
+          </p>
+        </div>
+
+        <form class="matcher" id="matcher" novalidate>
+          <fieldset class="matcher__fieldset">
+            <legend class="matcher__legend">Ваши навыки</legend>
+            <div class="chips" id="skill-chips">
+              <!-- чипсы вставляет match.js -->
+            </div>
+          </fieldset>
+          <div class="matcher__actions">
+            <button type="submit" class="btn btn--primary">Показать мэтч</button>
+            <button type="button" class="btn btn--secondary" id="matcher-reset">Сбросить</button>
+            <output class="matcher__count" id="matcher-count" for="skill-chips" aria-live="polite">Выбрано: 0</output>
+          </div>
+        </form>
+
+        <div class="matcher-results" id="matcher-results" aria-live="polite">
+          <div class="matcher-empty" id="matcher-empty">
+            <p>Задачи появятся здесь после первого выбора навыка.</p>
+            <p class="matcher-empty-hint" id="matcher-empty-hint"></p>
+          </div>
+          <div class="matcher-loading" id="matcher-loading" hidden>
+            <p class="kicker">Считаем совпадения…</p>
+            <div class="skeleton-row"></div>
+            <div class="skeleton-row"></div>
+            <div class="skeleton-row"></div>
+          </div>
+          <ol class="project-list" id="project-list" hidden>
+            <!-- карточки задач вставляет match.js -->
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="container site-footer__inner">
+      <p class="site-footer__mark">Paradox<span class="brand__dot" aria-hidden="true"></span></p>
+      <p class="site-footer__meta">Подбор задачи · <a href="index.html">на главную</a></p>
+    </div>
+  </footer>
+
+  <script src="file-guard.js" defer></script>
+  <script src="match.js" defer></script>
+</body>
+</html>

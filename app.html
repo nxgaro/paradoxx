@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradox — первая работа из первой задачи</title>
+  <meta name="description" content="Paradox разрывает круг «без опыта нет работы, без работы нет опыта»: реальные задачи малого бизнеса Казахстана для студентов, с ИИ-мэтчингом и верифицированным портфолио.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" id="brand-link">
+        <span class="brand__name">Paradox</span><span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__tag">разрываем круг опыта</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация"></nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ========================= ГЛАВНАЯ ========================= -->
+    <section class="page-view" id="view-home">
+
+      <section class="hero" id="top">
+        <div class="container">
+          <div class="hero__grid">
+            <div class="hero__text">
+              <p class="kicker reveal">Хакатон · Digital Economy &amp; Future Tech · Казахстан</p>
+              <h1 class="hero__title reveal">
+                Без опыта нет работы.<br>
+                Без работы <em>нет опыта</em>.
+              </h1>
+              <p class="hero__lead reveal">
+                <em>Paradox</em> — потому что этот круг и есть парадокс: реальные задачи малого
+                бизнеса Казахстана, разложенные ИИ на куски по 2–20 часов, выполняются студентами
+                ещё до первого найма — и превращаются в верифицированное портфолио вместо пункта «опыт».
+              </p>
+              <div class="hero__actions reveal">
+                <a class="btn btn--primary" href="/demo">Проверить мэтчинг</a>
+                <a class="btn btn--secondary" href="/how">Как это работает</a>
+              </div>
+            </div>
+
+            <figure class="hero__loop reveal" aria-label="Схема: круг «нет опыта — нет работы» разрезается первой задачей">
+              <svg viewBox="0 0 480 480" role="img" focusable="false">
+                <defs>
+                  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                    <path d="M0 0 L10 5 L0 10 z" class="loop-arrowhead"></path>
+                  </marker>
+                </defs>
+                <circle class="loop-circle" cx="240" cy="240" r="168" pathLength="100"></circle>
+                <g class="loop-node">
+                  <circle cx="240" cy="72" r="4"></circle>
+                  <text x="240" y="48" text-anchor="middle">нет работы: «нужен опыт»</text>
+                </g>
+                <g class="loop-node">
+                  <circle cx="385.5" cy="324" r="4"></circle>
+                  <text x="385.5" y="354" text-anchor="middle">нет опыта</text>
+                </g>
+                <g class="loop-node">
+                  <circle cx="94.5" cy="324" r="4"></circle>
+                  <text x="94.5" y="354" text-anchor="middle">нет портфолио</text>
+                </g>
+                <line class="loop-flow" x1="385.6" y1="156" x2="365.5" y2="121.4" marker-end="url(#arrow)"></line>
+                <line class="loop-flow" x1="240" y1="408" x2="280" y2="408" marker-end="url(#arrow)"></line>
+                <line class="loop-flow" x1="94.5" y1="156" x2="74.5" y2="190.6" marker-end="url(#arrow)"></line>
+                <line class="loop-cut" x1="96" y1="384" x2="384" y2="96"></line>
+                <g class="loop-break">
+                  <text x="240" y="236" text-anchor="middle">точка входа</text>
+                  <text class="loop-break__accent" x="240" y="276" text-anchor="middle">одна задача</text>
+                </g>
+              </svg>
+              <figcaption class="hero__loop-caption">Круг разрывается одной короткой задачей — подробнее в <a href="/solution">решении</a></figcaption>
+            </figure>
+          </div>
+
+          <dl class="hero__stats reveal">
+            <div class="stat">
+              <dt class="stat__label">студентов в пилоте</dt>
+              <dd class="stat__value">214</dd>
+              <dd class="stat__note">Алматы и Астана, опрос команды, октябрь 2025</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__label">искали первую работу дольше 6 мес.</dt>
+              <dd class="stat__value">71%</dd>
+              <dd class="stat__note">из 214 опрошенных</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__label">без единого реального проекта</dt>
+              <dd class="stat__value">63%</dd>
+              <dd class="stat__note">резюме заполнено, портфолио — нет</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__label">МСБ не держит наставника для джунов</dt>
+              <dd class="stat__value">11/15</dd>
+              <dd class="stat__note">студий и агентств, глубинные интервью</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="manifesto">
+        <div class="container">
+          <blockquote class="manifesto__quote reveal">
+            <p>Работодателю не нужен «опыт».<br>Ему нужен <em>результат</em>.
+            Опыт — это просто архив результатов, который у выпускника пока пуст.</p>
+          </blockquote>
+          <p class="manifesto__meta reveal">— рабочая гипотеза «Paradox», проверяемая на пилоте из 8 задач</p>
+        </div>
+      </section>
+
+      <nav class="page-next" aria-label="Следующий раздел">
+        <a class="page-next__link" href="/problem"><span>дальше</span>Проблема — разрыв между образованием и рынком</a>
+      </nav>
+
+    </section>
+
+    <!-- ========================= ПРОБЛЕМА ========================= -->
+    <section class="page-view" id="view-problem">
+      <section class="problem section" id="problem">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal">01 / проблемная зона</p>
+            <h2 class="section__title reveal">Разрыв между образованием и рынком</h2>
+          </div>
+
+          <div class="meta-grid">
+            <div class="meta-col reveal">
+              <h3 class="meta-col__label">Кто застревает</h3>
+            </div>
+            <div class="meta-col reveal">
+              <ul class="persona-list">
+                <li>
+                  <p class="persona-list__who">Дана, выпускница ИТ-вуза</p>
+                  <p>Знает SQL и Python, защитила диплом — но в резюме нет ни одной строки о специальности.</p>
+                </li>
+                <li>
+                  <p class="persona-list__who">Айдар, выпускник колледжа</p>
+                  <p>12 отправленных заявок на junior-разработчика. Ответ на все: «требуется опыт от 1 года».</p>
+                </li>
+                <li>
+                  <p class="persona-list__who">Стоматология, 4 сотрудника, Астана</p>
+                  <p>Нужна мини-CRM для записей. Джуна обучать некому, фрилансеру не доверяют.</p>
+                </li>
+                <li>
+                  <p class="persona-list__who">IT-студия, 7 человек, Алматы</p>
+                  <p>Наставник для джуна — это минус 5 часов сеньора в день. Дороже, чем польза.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="meta-grid meta-grid--flip">
+            <div class="meta-col reveal">
+              <h3 class="meta-col__label">Почему круг не размыкается</h3>
+            </div>
+            <div class="meta-col reveal">
+              <ol class="gap-list">
+                <li>
+                  <span class="gap-list__num">а.</span>
+                  <p><strong>Вакансии требуют опыт</strong> — а сама вакансия для студента и есть единственный легальный источник этого опыта.</p>
+                </li>
+                <li>
+                  <span class="gap-list__num">б.</span>
+                  <p><strong>Учебные проекты — не рынок.</strong> Работодатель не может проверить «домашку» в продакшене: нет клиента, нет дедлайна, нет денег, нет ответственности.</p>
+                </li>
+                <li>
+                  <span class="gap-list__num">в.</span>
+                  <p><strong>МСБ не может обучать.</strong> Малая компания платит за задачи, а не за рост сотрудника, и не может выделить наставника на 20 часов в неделю.</p>
+                </li>
+              </ol>
+              <p class="gap-note">Существующие программы (стажировки, «Первый диплом», гранты) помогают начать карьеру, но не решают фундаментальную задачу: <em>откуда взять первый результат, который можно предъявить.</em></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-next" aria-label="Следующий раздел">
+        <a class="page-next__link" href="/solution"><span>дальше</span>Решение — задача как точка входа в профессию</a>
+      </nav>
+    </section>
+
+    <!-- ========================= РЕШЕНИЕ ========================= -->
+    <section class="page-view" id="view-solution">
+      <section class="solution section" id="solution">
+        <div class="container">
+          <div class="split split--7-5">
+            <div class="split__text">
+              <p class="kicker reveal">02 / решение</p>
+              <h2 class="section__title reveal">Задача как точка входа в профессию</h2>
+              <p class="split__lead reveal">
+                Мы не создаём «ещё одну вакансию для джунов». Мы режем работу, которая
+                <em>и так существует</em> у малого бизнеса, на задачи, посильные для новичка.
+              </p>
+              <ul class="feature-list reveal">
+                <li>
+                  <h3>ИИ-декомпозер</h3>
+                  <p>Бизнес описывает боль обычным языком («записи теряются, клиенты не приходят»). LLM раскладывает её на scoped-задачи по 2–20 часов с чек-листом приёмки.</p>
+                </li>
+                <li>
+                  <h3>Мэтчинг навыков</h3>
+                  <p>Резюме и учебные проекты студента превращаются в профиль навыков. Подбор идёт по близости профиля к задаче, а не по формату «стажировки».</p>
+                </li>
+                <li>
+                  <h3>Паспорт Paradox</h3>
+                  <p>Каждая закрытая задача верифицируется заказчиком и попадает в портфельный паспорт: задача, артефакт, отзыв, часы. Получается проверяемый референс, а не «домашка» в списке работ.</p>
+                </li>
+              </ul>
+            </div>
+
+            <aside class="split__side reveal">
+              <article class="file-card" aria-label="Пример карточки задачи">
+                <header class="file-card__head">
+                  <span class="file-card__kind" aria-hidden="true">задача</span>
+                  <span class="file-card__time">14 ч</span>
+                </header>
+                <h4>Телеграм-запись в барбершоп «Кесу»</h4>
+                <p class="file-card__body">Клиенты записываются по WhatsApp и теряются. Нужен бот: выбор мастера, слот, напоминание за 2 часа.</p>
+                <dl class="file-card__meta">
+                  <div><dt>город</dt><dd>Алматы</dd></div>
+                  <div><dt>бюджет</dt><dd>30 000 ₸</dd></div>
+                  <div><dt>приёмка</dt><dd>бот живой, список из 3 записей</dd></div>
+                </dl>
+              </article>
+              <p class="split__side-note">Мини-размер задачи оправдан рынком: малый бизнес купил бы у фрилансера ровно такой объём, но не мог позволить себе проверить на новичке.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-next" aria-label="Следующий раздел">
+        <a class="page-next__link" href="/how"><span>дальше</span>Как работает — четыре шага</a>
+      </nav>
+    </section>
+
+    <!-- ========================= КАК РАБОТАЕТ ========================= -->
+    <section class="page-view" id="view-how">
+      <section class="how section" id="how">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal">03 / механика</p>
+            <h2 class="section__title reveal">Четыре шага</h2>
+          </div>
+          <ol class="steps">
+            <li class="step reveal">
+              <span class="step__num" aria-hidden="true">01</span>
+              <h3 class="step__title">Бизнес описывает боль</h3>
+              <p>Владелец пекарни или стоматологии заполняет форму на человеческом языке — без ТЗ на 20 страниц и без менеджера посередине.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num" aria-hidden="true">02</span>
+              <h3 class="step__title">ИИ режет на задачи</h3>
+              <p>Декомпозер выделяет 2–6 scoped-задач: объём в часах, навыки, чек-лист приёмки. Человеку-модератору остаётся сверка на здравый смысл.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num" aria-hidden="true">03</span>
+              <h3 class="step__title">Мэтчинг со студентами</h3>
+              <p>Профиль навыков студента сравнивается с задачей. Студенты видят не «подходит / не подходит», а процент совпадения и список навыков, которых не хватает.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num" aria-hidden="true">04</span>
+              <h3 class="step__title">Результат = портфолио</h3>
+              <p>Закрытая задача попадает в «Паспорт Paradox» с артефактом и верификацией бизнеса. Следующий работодатель видит работу, а не самооценку.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <nav class="page-next" aria-label="Следующий раздел">
+        <a class="page-next__link" href="/demo"><span>дальше</span>Демо — проверьте подбор задачи</a>
+      </nav>
+    </section>
+
+    <!-- ========================= ДЕМО ========================= -->
+    <section class="page-view" id="view-demo">
+      <section class="demo section" id="demo">
+        <div class="container" id="democs">
+          <div class="section__head">
+            <p class="kicker reveal">04 / демо MVP</p>
+            <h2 class="section__title reveal">Попробуйте подбор задачи</h2>
+            <p class="section__lead reveal">Отметьте свои навыки — модель сверит их с реальными задачами малого бизнеса из пилота и покажет процент совпадения. Подбор доступен после входа.</p>
+            <div class="demo-cta reveal">
+              <a class="btn btn--primary" href="/match">Открыть подбор</a>
+              <a class="btn btn--secondary" href="/login">Войти или создать аккаунт</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-next" aria-label="Следующий раздел">
+        <a class="page-next__link" href="/market"><span>дальше</span>Экономика — каждая сторона платит за своё</a>
+      </nav>
+    </section>
+
+    <!-- ========================= ЭКОНОМИКА ========================= -->
+    <section class="page-view" id="view-market">
+      <section class="market section section--split" id="market">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal">05 / экономика</p>
+            <h2 class="section__title reveal">Каждая сторона платит за своё</h2>
+          </div>
+          <div class="market__grid">
+            <div class="table-scroll reveal">
+              <table class="market-table">
+              <caption>Экономика модели на пилоте</caption>
+              <thead>
+                <tr><th scope="col">Статья</th><th scope="col">Кто платит</th><th scope="col">Цена</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Публикация задачи</td><td>МСП</td><td>бесплатно</td></tr>
+                <tr><td>Сервисный сбор за закрытую задачу</td><td>МСП</td><td>10% бюджета</td></tr>
+                <tr><td>«Паспорт Paradox»</td><td>студент</td><td>бесплатно навсегда</td></tr>
+                <tr><td>Подписка МСП: пул кандидатов + аналитика</td><td>МСП</td><td>14 900 ₸ / мес</td></tr>
+                <tr><td>Средний чек задачи (пилот)</td><td>—</td><td>35 000 ₸</td></tr>
+                <tr><td>Средний срок закрытия (пилот)</td><td>—</td><td>9 дней</td></tr>
+              </tbody>
+              </table>
+            </div>
+
+            <aside class="market__aside reveal">
+              <h3 class="market__aside-label">Почему это работает</h3>
+              <ul class="plain-list">
+                <li>Компания платит только за сделанную работу — как за фриланс, но с шансом найти джуна в штат.</li>
+                <li>Студент получает деньги и референс сразу — вместо «стажировки без оплаты».</li>
+                <li>Платформа зарабатывает с оборота, поэтому заинтересована в количестве закрытых задач, а не в «продаже курса».</li>
+              </ul>
+              <p class="market__calc">Юнит-экономика одной задачи: 35 000 ₸ × 10% = <strong>3 500 ₸</strong> маржи. 1 000 задач в месяц по Казахстану = 3,5 млн ₸.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-next" aria-label="Следующий раздел">
+        <a class="page-next__link" href="/team"><span>дальше</span>Команда и стек — что под капотом</a>
+      </nav>
+    </section>
+
+    <!-- ========================= КОМАНДА ========================= -->
+    <section class="page-view" id="view-team">
+      <section class="team section" id="team">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal">06 / команда и стек</p>
+            <h2 class="section__title reveal">Что под капотом</h2>
+          </div>
+          <div class="meta-grid">
+            <div class="meta-col reveal">
+              <h3 class="meta-col__label">Стек</h3>
+            </div>
+            <div class="meta-col reveal">
+              <ul class="stack-list">
+                <li><span>фронтенд</span>HTML, CSS, vanilla JS — сайт работает без сборки и сетевых зависимостей</li>
+                <li><span>мэтчинг</span>TF-IDF-векторизация профиля навыков и задач, косинусная близость + бонусы за область</li>
+                <li><span>в проде</span>PostgreSQL + pgvector, LLM-декомпозер задач, модерация человеком</li>
+                <li><span>деплой</span>статический хостинг, live-версия — по ссылке в описании проекта</li>
+              </ul>
+            </div>
+          </div>
+          <div class="meta-grid meta-grid--flip">
+            <div class="meta-col reveal">
+              <h3 class="meta-col__label">Команда</h3>
+            </div>
+            <div class="meta-col reveal">
+              <ul class="persona-list persona-list--compact">
+                <li><p class="persona-list__who">Ансар — бэкенд, фронтенд, лидер</p></li>
+                <li><p class="persona-list__who">Наиль — фронтенд</p></li>
+                <li><p class="persona-list__who">Эльдар — бэкенд</p></li>
+                <li><p class="persona-list__who">Нелли — дизайн</p></li>
+                <li><p class="persona-list__who">Инкара — монтаж</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="page-next" aria-label="Следующий раздел">
+        <a class="page-next__link" href="/match"><span>практика</span>Подбор задачи — найдите свою первую задачу</a>
+      </nav>
+    </section>
+
+    <!-- ========================= ВХОД ========================= -->
+    <section class="page-view auth-page" id="view-login">
+      <div class="container auth-page__inner">
+        <section class="auth-copy" aria-labelledby="auth-copy-title">
+          <p class="kicker">Аккаунт Paradox</p>
+          <h1 class="auth-copy__title" id="auth-copy-title">Одна платформа —<br><em>три роли</em></h1>
+          <p class="auth-copy__lead">
+            Регистрация сразу открывает личный кабинет. Роль «Потребитель» выдаёт
+            администратор — после этого можно публиковать задачи.
+          </p>
+
+          <ul class="role-list">
+            <li class="role-list__item">
+              <span class="role-badge role-badge--user">Пользователь</span>
+              <p>Смотрит открытые задачи, откликается на них и следит за статусом своих откликов.</p>
+            </li>
+            <li class="role-list__item">
+              <span class="role-badge role-badge--consumer">Потребитель</span>
+              <p>Создаёт задачи через форму, получает отклики и выбирает исполнителя.</p>
+            </li>
+            <li class="role-list__item">
+              <span class="role-badge role-badge--admin">Админ</span>
+              <p>Управляет ролями, задачами и откликами. Видит всю платформу.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="auth-card" aria-labelledby="auth-card-title">
+          <div class="auth-tabs" role="tablist" aria-label="Вход или регистрация">
+            <button type="button" class="auth-tab is-active" id="tab-login" role="tab"
+                    aria-selected="true" aria-controls="login-form" data-tab="login">Вход</button>
+            <button type="button" class="auth-tab" id="tab-register" role="tab"
+                    aria-selected="false" aria-controls="register-form" data-tab="register">Регистрация</button>
+          </div>
+
+          <h2 class="auth-card__title" id="auth-card-title">Войти в кабинет</h2>
+
+          <form class="auth-form" id="login-form" novalidate>
+            <div class="field">
+              <label class="field__label" for="login-email">Email</label>
+              <input class="field__input" id="login-email" name="email" type="email"
+                     autocomplete="email" required placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label class="field__label" for="login-password">Пароль</label>
+              <input class="field__input" id="login-password" name="password" type="password"
+                     autocomplete="current-password" required minlength="8" placeholder="Минимум 8 символов">
+            </div>
+            <p class="form-message" id="form-message" role="alert" hidden></p>
+            <button class="btn btn--primary auth-form__submit" type="submit">Войти</button>
+          </form>
+
+          <form class="auth-form" id="register-form" novalidate hidden>
+            <div class="field">
+              <label class="field__label" for="register-name">Имя</label>
+              <input class="field__input" id="register-name" name="name" type="text"
+                     autocomplete="name" required minlength="2" placeholder="Как к вам обращаться">
+            </div>
+            <div class="field">
+              <label class="field__label" for="register-email">Email</label>
+              <input class="field__input" id="register-email" name="email" type="email"
+                     autocomplete="email" required placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label class="field__label" for="register-company">Компания <span class="field__hint">— необязательно</span></label>
+              <input class="field__input" id="register-company" name="company" type="text"
+                     autocomplete="organization" placeholder="Если вы заказчик">
+            </div>
+            <div class="field">
+              <label class="field__label" for="register-password">Пароль</label>
+              <input class="field__input" id="register-password" name="password" type="password"
+                     autocomplete="new-password" required minlength="8" placeholder="Минимум 8 символов">
+            </div>
+            <div class="field">
+              <label class="field__label" for="register-password2">Повторите пароль</label>
+              <input class="field__input" id="register-password2" name="password2" type="password"
+                     autocomplete="new-password" required minlength="8" placeholder="Ещё раз">
+            </div>
+            <p class="form-message" id="register-message" role="alert" hidden></p>
+            <button class="btn btn--primary auth-form__submit" type="submit">Создать аккаунт</button>
+            <p class="auth-form__note">После регистрации вы получите роль «Пользователь». Роль «Потребитель» выдаёт администратор.</p>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <!-- ========================= ПОДБОР ========================= -->
+    <section class="page-view" id="view-match">
+      <section class="demo section">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker">Подбор задачи</p>
+            <h2 class="section__title">Отметьте навыки — покажем подходящие задачи</h2>
+            <p class="section__lead">
+              Модель сверяет ваш профиль навыков с реальными задачами малого бизнеса
+              Казахстана и показывает процент совпадения с объяснением.
+            </p>
+          </div>
+
+          <form class="matcher" id="matcher" novalidate>
+            <fieldset class="matcher__fieldset">
+                <legend class="matcher__legend">Ваши навыки</legend>
+              <div class="chips" id="skill-chips"></div>
+            </fieldset>
+            <div class="matcher__actions">
+              <button type="submit" class="btn btn--primary">Показать мэтч</button>
+              <button type="button" class="btn btn--secondary" id="matcher-reset">Сбросить</button>
+              <output class="matcher__count" id="matcher-count" for="skill-chips" aria-live="polite">Выбрано: 0</output>
+            </div>
+          </form>
+
+          <div class="matcher-results" id="matcher-results" aria-live="polite">
+            <div class="matcher-empty" id="matcher-empty">
+              <p>Задачи появятся здесь после первого выбора навыка.</p>
+              <p class="matcher-empty-hint" id="matcher-empty-hint"></p>
+            </div>
+            <div class="matcher-loading" id="matcher-loading" hidden>
+              <p class="kicker">Считаем совпадения…</p>
+              <div class="skeleton-row"></div>
+              <div class="skeleton-row"></div>
+              <div class="skeleton-row"></div>
+            </div>
+            <ol class="project-list" id="project-list" hidden></ol>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ========================= КАБИНЕТ ========================= -->
+    <section class="page-view dash-page" id="view-dashboard">
+      <div class="container">
+        <header class="dash-head">
+          <div>
+            <p class="kicker">Личный кабинет</p>
+            <h1 class="dash-title">Привет, <span id="dash-name">…</span></h1>
+            <p class="dash-subtitle" id="dash-role">Загружаем профиль…</p>
+          </div>
+          <div class="dash-head__actions" id="dash-actions"></div>
+        </header>
+
+        <div class="dash-stats" id="dash-stats" aria-label="Краткая статистика"></div>
+
+        <div class="dash-tabs" id="dash-tabs" role="tablist" aria-label="Разделы кабинета"></div>
+        <section class="dash-panel" id="dash-panel" aria-live="polite">
+          <p class="dash-loading">Загружаем данные…</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- ========================= FAQ ========================= -->
+    <section class="page-view" id="view-faq">
+      <section class="doc section">
+        <div class="container">
+          <p class="kicker">FAQ</p>
+          <h1 class="doc__title">Вопросы и ответы</h1>
+          <p class="doc__lead">Коротко о главном: подбор, задачи, деньги, роли и данные.</p>
+
+          <div class="doc__body">
+            <details class="faq-item" open>
+              <summary>Что такое Paradox в одном предложении?</summary>
+              <p>Платформа, которая переводит реальные задачи малого бизнеса Казахстана в короткие проверяемые задачи, чтобы студент получил референс и первые деньги ещё во время учёбы.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Кто может зарегистрироваться?</summary>
+              <p>Любой студент, выпускник или заказчик. Сразу после регистрации открывается роль «Пользователь». Роль «Потребитель», то есть право публиковать задачи, выдаёт администратор: без этого у площадки не было бы контроля над тем, какие задачи видят люди.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Я студент. С чего начать?</summary>
+              <p>Зарегистрируйтесь (<a href="/login">вход и регистрация</a>), отметьте свои навыки на странице <a href="/match">подбора</a> и откликнитесь на подходящую задачу. Статус отклика и его историю видно в личном кабинете.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Почему подбор задач доступен только после входа?</summary>
+              <p>Задачи и отклики — рабочие данные, заказчики ждут содержательные отклики от реальных людей. Регистрация занимает пару минут, зато статус каждого отклика отслеживается в кабинете.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Как именно работает подбор?</summary>
+              <p>Вы отмечаете навыки, система считает совпадение с каждой открытой задачей: какая доля выбранных навыков есть в задаче и какую часть требований задачи они закрывают. Список задач подтягивается с сервера, а не набран вручную.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Задачи настоящие? Откуда они?</summary>
+              <p>Все задачи публикуются компаниями, ищущими себе работников.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Как устроены деньги?</summary>
+              <p>У каждой задачи есть бюджет в тенге и объём в часах — их ставит заказчик. В пилоте платформа не обрабатывает платежи: бюджет фиксируется как договорная сумма между заказчиком и исполнителем. Как зарабатывает сама платформа, описано в таблице «Экономика» на <a href="/">главной</a>.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Что такое «чек-лист приёмки»?</summary>
+              <p>Заказчик описывает вместе с задачей, что будет считаться готовой работой. Исполнитель передаёт артефакт, заказчик сверяет его с чек-листом — и только после приёмки задача попадает в портфельный паспорт исполнителя.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Я малый бизнес. Как опубликовать задачу?</summary>
+              <p>Зарегистрируйтесь и сообщите команде проекта, что нужен доступ «Потребитель». После выдачи роли в кабинете появится форма создания задач, а к ним начнут приходить отклики студентов.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Что будет, если мой отклик не выбрали?</summary>
+              <p>Отклик останется в истории кабинета со статусом: ждёт решения, принят, отклонён. Заказчик отвечает по каждому отклику: либо принимает его, либо указывает причину отказа.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Как вы обращаетесь с моими данными?</summary>
+              <p>Храним минимум: имя, email и опционально компанию. Пароли — только в виде нестойких к подбору хешей, а точнее — scrypt-хешей, которые не восстанавливаются обратно. Сессия работает через HttpOnly cookie, недоступный скриптам. Полный список — в <a href="/privacy">политике конфиденциальности</a>.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Это рабочий продукт или только презентация?</summary>
+              <p>Это пилот в рамках хакатона: масштабы небольшие, но техническая база настоящая — база данных, сессии, роли и права доступа уже работают. Страница подбора полностью функциональна, её можно проверить прямо сейчас.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ========================= ПОЛИТИКА ========================= -->
+    <section class="page-view" id="view-privacy">
+      <section class="doc section">
+        <div class="container">
+          <p class="kicker">Документ · черновик пилота</p>
+          <h1 class="doc__title">Политика конфиденциальности</h1>
+          <p class="doc__lead">Действует для сайта paradox и его персональных данных, обрабатываемых в рамках пилота. Редакция от 06.11.2026.</p>
+
+          <div class="doc__body">
+            <h2>1. Кто обрабатывает данные</h2>
+            <p>Paradox — студенческий проект (кейс «The Experience Gap», хакатон, ноябрь 2026). Обработку данных на этапе пилота ведёт команда проекта. Контакт для вопросов о данных появится на этой странице до выхода из пилота.</p>
+
+            <h2>2. Какие данные мы собираем</h2>
+            <ul>
+              <li><strong>Аккаунт:</strong> имя, email, опционально название компании, хеш пароля (scrypt, восстановлению не подлежит).</li>
+              <li><strong>Роль:</strong> пользователь, потребитель или администратор; от роли зависит, что можно сделать в кабинете.</li>
+              <li><strong>Контент:</strong> тексты задач, отклики, чек-листы приёмки, статусы работ, оценки в личном кабинете.</li>
+              <li><strong>Сессия:</strong> cookie <code>paradox_sid</code> — HttpOnly, не читается скриптами, живёт до 7 дней и нужна только для входа.</li>
+            </ul>
+
+            <h2>3. Зачем нам эти данные</h2>
+            <ul>
+              <li>Завести аккаунт и отличать вас от других участников.</li>
+              <li>Показывать задачи, подходящие по навыкам, и вести историю откликов.</li>
+              <li>Дать заказчику приёмку результата и защитить от дублей откликов.</li>
+              <li>Дать администратору возможность управлять ролями и модерировать задачи.</li>
+            </ul>
+            <p>Мы не рассылаем рекламу, не продаём и не передаём данные третьим лицам для их целей.</p>
+
+            <h2>4. Третьи стороны</h2>
+            <p>Сайт подключает шрифты Google Fonts, поэтому при загрузке страниц браузер отправляет Google ваш IP-адрес и пользовательский агент. Больше внешних сервисов сайт не использует. База данных (SQLite) хранится на сервере пилота и наружу не доступна.</p>
+
+            <h2>5. Сколько храним</h2>
+            <p>Данные аккаунта и откликов хранятся, пока существует аккаунт. Недействительные сессии мы удаляем автоматически. Демо-задачи и пилотные цифры могут использоваться на лендинге в обезличенном виде — имена компаний там вымышлены.</p>
+
+            <h2>6. Ваши права</h2>
+            <ul>
+              <li>Посмотреть, что мы о вас храним, — основные данные видны в личном кабинете.</li>
+              <li>Изменить имя и компанию — в кабинете.</li>
+              <li>Удалить аккаунт и все свои данные — на этапе пилота по запросу команде проекта; удаление «одной кнопкой» запланировано после пилота.</li>
+            </ul>
+
+            <h2>7. Ограничения пилота</h2>
+            <p>Это прототип для хакатона: честно фиксируем, что часть процессов (например, самостоятельное восстановление доступа и удаление аккаунта) ещё не готова. Полный юридический текст будет подготовлен к выходу из пилота. И обычная осторожность: не пишите в задачи и отклики данные, которые не готовы доверить платформе.</p>
+
+            <h2>8. Изменения</h2>
+            <p>Об изменениях этой политики мы сообщаем на этой же странице и меняем дату редакции.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ========================= УСЛОВИЯ ========================= -->
+    <section class="page-view" id="view-terms">
+      <section class="doc section">
+        <div class="container">
+          <p class="kicker">Документ · черновик пилота</p>
+          <h1 class="doc__title">Условия использования</h1>
+          <p class="doc__lead">Регулируют работу с сайтом paradox на этапе пилота. Редакция от 06.11.2026. Текст для пилота упрощён; к выходу из пилота готовится полная версия.</p>
+
+          <div class="doc__body">
+            <h2>1. Статус</h2>
+            <p>Paradox — пилот студенческого проекта в рамках хакатона. Это не публичная оферта: условия могут меняться, а доступ к функциям — временно отключаться во время доработок.</p>
+
+            <h2>2. Аккаунт и роли</h2>
+            <ul>
+              <li>Один аккаунт на человека; многоаккаунтность запрещена.</li>
+              <li>Вы отвечаете за конфиденциальность пароля и действия, произошедшие с вашей сессии.</li>
+              <li>Роль «Пользователь» открывается при регистрации. Роль «Потребитель» (публикация задач и выбор исполнителей) выдаёт администратор.</li>
+              <li>Публиковать задачи может только «Потребитель», откликаться — только «Пользователь». Администратор управляет ролями, задачами и откликами и не может сам себя разжаловать.</li>
+            </ul>
+
+            <h2>3. Задачи и отклики</h2>
+            <ul>
+              <li>Откликнуться на задачу можно один раз; дубликаты отклоняются платформой.</li>
+              <li>Заказчик принимает или отклоняет отклики и по каждому даёт ответ — через выбор исполнителя или отказ с причиной.</li>
+              <li>Готовность работы подтверждается по чек-листу приёмки, описанному в задаче; артефакт результата после приёмки попадает в портфельный паспорт исполнителя.</li>
+              <li>Подбор задач показывается только вошедшим пользователям, потому что отклики — рабочие данные.</li>
+            </ul>
+
+            <h2>4. Деньги</h2>
+            <p>На этапе пилота платформа не обрабатывает платежи и не является стороной расчётов. Бюджет задачи — договорная сумма между заказчиком и исполнителем в тенге; платформа фиксирует её только как учётные данные. Комиссии и распределения денег на пилоте проверяются вручную командой проекта.</p>
+
+            <h2>5. Запрещённое</h2>
+            <ul>
+              <li>Фиктивные задачи и отклики «не по делу», спам и реклама.</li>
+              <li>Задачи или артефакты, исполнение которых нарушает закон или академическую этику студента.</li>
+              <li>Персональные данные третьих лиц в открытых текстах задач и откликов.</li>
+              <li>Пытаться получить доступ к чужим сессиям, данным или административным возможностям.</li>
+            </ul>
+
+            <h2>6. Модерация</h2>
+            <p>Администратор может править или удалять задачи, отклики и роли, если они нарушают эти условия. Решения о модерации обсуждаются с автором по запросу, но окончательны на этапе пилота.</p>
+
+            <h2>7. Ответственность</h2>
+            <p>Платформа работает «как есть»: на пилоте возможны перерывы, изменения функциональности и ошибки. Стороны (заказчик и исполнитель) отвечают друг перед другом за цели сами — платформа к их договору стороной не является. Мы не гарантируем, что отклик приведёт к заказу, а задача — к исполнителю.</p>
+
+            <h2>8. Данные и cookie</h2>
+            <p>Вход работает через сессионную cookie, которая хранится не более 7 дней и не читается скриптами. Состав данных и сроки — в <a href="/privacy">политике конфиденциальности</a>.</p>
+
+            <h2>9. Изменения условий</h2>
+            <p>Мы обновляем этот текст по мере доработки пилота и помечаем редакцию датой. Продолжая пользоваться сайтом после обновления, вы принимаете новую редакцию.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <!-- Детали задачи -->
+  <dialog class="dialog dialog--wide" id="task-dialog" aria-labelledby="task-dialog-title">
+    <button type="button" class="dialog__close" data-close-dialog="task-dialog" aria-label="Закрыть">×</button>
+    <div id="task-dialog-body"></div>
+  </dialog>
+
+  <!-- Создание задачи -->
+  <dialog class="dialog" id="create-dialog" aria-labelledby="create-dialog-title">
+    <button type="button" class="dialog__close" data-close-dialog="create-dialog" aria-label="Закрыть">×</button>
+    <div class="dialog__head">
+      <p class="kicker">Новая задача</p>
+      <h2 class="dialog__title" id="create-dialog-title">Создать задачу</h2>
+      <p class="dialog__lead">Опишите боль человеческим языком. После публикации задача появится у пользователей и в демо-мэтчинге.</p>
+    </div>
+
+    <form class="form-grid" id="create-form" novalidate>
+      <div class="field field--full">
+        <label class="field__label" for="task-title">Название задачи</label>
+        <input class="field__input" id="task-title" name="title" type="text" required minlength="3"
+               placeholder="Например: Телеграм-бот записи в барбершоп">
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-company">Компания / заказчик</label>
+        <input class="field__input" id="task-company" name="company" type="text" required minlength="2"
+               placeholder="Название компании">
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-area">Сфера</label>
+        <select class="field__input" id="task-area" name="area">
+          <option value="IT">IT</option>
+          <option value="Дизайн">Дизайн</option>
+          <option value="Аналитика">Аналитика</option>
+          <option value="Медиа">Медиа</option>
+          <option value="Другое">Другое</option>
+        </select>
+      </div>
+
+      <div class="field field--full">
+        <label class="field__label" for="task-description">Что нужно сделать</label>
+        <textarea class="field__input field__input--textarea" id="task-description" name="description"
+                  rows="5" required minlength="10"
+                  placeholder="Опишите проблему и ожидаемый результат. Без ТЗ на 20 страниц."></textarea>
+      </div>
+
+      <div class="field field--full">
+        <label class="field__label" for="task-skills">Навыки <span class="field__hint">— через запятую</span></label>
+        <input class="field__input" id="task-skills" name="skills" type="text"
+               placeholder="Python, SQL, Figma">
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-hours">Объём, часов</label>
+        <input class="field__input" id="task-hours" name="hours" type="number" min="1" max="200" value="8" required>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-budget">Бюджет, ₸</label>
+        <input class="field__input" id="task-budget" name="budget" type="number" min="0" max="10000000" step="1000" value="30000" required>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-deadline">Дедлайн <span class="field__hint">— необязательно</span></label>
+        <input class="field__input" id="task-deadline" name="deadline" type="date">
+      </div>
+
+      <p class="form-message field--full" id="create-message" role="alert" hidden></p>
+
+      <div class="dialog__actions field--full">
+        <button type="button" class="btn btn--secondary" data-close-dialog="create-dialog">Отмена</button>
+        <button type="submit" class="btn btn--primary">Опубликовать задачу</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Отклики на задачу -->
+  <dialog class="dialog dialog--wide" id="apps-dialog" aria-labelledby="apps-dialog-title">
+    <button type="button" class="dialog__close" data-close-dialog="apps-dialog" aria-label="Закрыть">×</button>
+    <div class="dialog__head">
+      <p class="kicker">Отклики</p>
+      <h2 class="dialog__title" id="apps-dialog-title">Кандидаты</h2>
+    </div>
+    <div id="apps-dialog-body"></div>
+  </dialog>
+
+  <!-- Смена пароля -->
+  <dialog class="dialog" id="password-dialog" aria-labelledby="password-dialog-title">
+    <button type="button" class="dialog__close" data-close-dialog="password-dialog" aria-label="Закрыть">×</button>
+    <div class="dialog__head">
+      <p class="kicker">Безопасность</p>
+      <h2 class="dialog__title" id="password-dialog-title">Сменить пароль</h2>
+    </div>
+    <form class="form-grid" id="password-form" novalidate>
+      <div class="field field--full">
+        <label class="field__label" for="current-password">Текущий пароль</label>
+        <input class="field__input" id="current-password" name="currentPassword" type="password"
+               autocomplete="current-password" required>
+      </div>
+      <div class="field field--full">
+        <label class="field__label" for="new-password">Новый пароль</label>
+        <input class="field__input" id="new-password" name="newPassword" type="password"
+               autocomplete="new-password" minlength="8" required placeholder="Минимум 8 символов">
+      </div>
+      <p class="form-message field--full" id="password-message" role="alert" hidden></p>
+      <div class="dialog__actions field--full">
+        <button type="button" class="btn btn--secondary" data-close-dialog="password-dialog">Отмена</button>
+        <button type="submit" class="btn btn--primary">Сохранить пароль</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast-stack" id="toasts" aria-live="polite"></div>
+
+  <script src="file-guard.js" defer></script>
+  <script src="spa.js" defer></script>
+</body>
+</html>

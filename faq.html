@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вопросы и ответы — Paradox</title>
+  <meta name="description" content="Как работает подбор, откуда задачи, как устроены деньги и роли — ответы на основные вопросы о Paradox.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Paradox</span><span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__tag">разрываем круг опыта</span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="index.html">На главную</a>
+        <a href="match.html">Актуальные задачи</a>
+        <a href="login.html" class="site-nav__cta">Кабинет</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="doc section">
+      <div class="container">
+        <p class="kicker">FAQ</p>
+        <h1 class="doc__title">Вопросы и ответы</h1>
+        <p class="doc__lead">Коротко о главном: подбор, задачи, деньги, роли и данные.</p>
+
+        <div class="doc__body">
+          <details class="faq-item" open>
+            <summary>Что такое Paradox в одном предложении?</summary>
+            <p>Платформа, которая переводит реальные задачи малого бизнеса Казахстана в короткие проверяемые задачи, чтобы студент получил референс и первые деньги ещё во время учёбы.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Кто может зарегистрироваться?</summary>
+            <p>Любой студент, выпускник или заказчик. Сразу после регистрации открывается роль «Пользователь». Роль «Потребитель», то есть право публиковать задачи, выдаёт администратор: без этого у площадки не было бы контроля над тем, какие задачи видят люди.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Я студент. С чего начать?</summary>
+            <p>Зарегистрируйтесь (<a href="login.html">вход и регистрация</a>), отметьте свои навыки на странице <a href="match.html">подбора</a> и откликнитесь на подходящую задачу. Статус отклика и его историю видно в личном кабинете.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Почему подбор задач доступен только после входа?</summary>
+            <p>Задачи и отклики — рабочие данные, заказчики ждут содержательные отклики от реальных людей. Регистрация занимает пару минут, зато статус каждого отклика отслеживается в кабинете.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Как именно работает подбор?</summary>
+            <p>Вы отмечаете навыки, система считает совпадение с каждой открытой задачей: какая доля выбранных навыков есть в задаче и какую часть требований задачи они закрывают. Список задач подтягивается с сервера, а не набран вручную.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Задачи настоящие? Откуда они?</summary>
+            <p>Все задачи публикуются компаниями, ищущими себе работников.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Как устроены деньги?</summary>
+            <p>У каждой задачи есть бюджет в тенге и объём в часах — их ставит заказчик. В пилоте платформа не обрабатывает платежи: бюджет фиксируется как договорная сумма между заказчиком и исполнителем. Как зарабатывает сама платформа, описано в таблице «Экономика» на главной.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Что такое «чек-лист приёмки»?</summary>
+            <p>Заказчик описывает вместе с задачей, что будет считаться готовой работой. Исполнитель передаёт артефакт, заказчик сверяет его с чек-листом — и только после приёмки задача попадает в портфельный паспорт исполнителя.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Я малый бизнес. Как опубликовать задачу?</summary>
+            <p>Зарегистрируйтесь и сообщите команде проекта, что нужен доступ «Потребитель». После выдачи роли в кабинете появится форма создания задач, а к ним начнут приходить отклики студентов.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Что будет, если мой отклик не выбрали?</summary>
+            <p>Отклик останется в истории кабинета со статусом: ждёт решения, принят, отклонён. Заказчик отвечает по каждому отклику: либо принимает его, либо указывает причину отказа.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Как вы обращаетесь с моими данными?</summary>
+            <p>Храним минимум: имя, email и опционально компанию. Пароли — только в виде нестойких к подбору хешей, а точнее — scrypt-хешей, которые не восстанавливаются обратно. Сессия работает через HttpOnly cookie, недоступный скриптам. Полный список — в <a href="privacy.html">политике конфиденциальности</a>.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Это рабочий продукт или только презентация?</summary>
+            <p>Это пилот в рамках хакатона: масштабы небольшие, но техническая база настоящая — база данных, сессии, роли и права доступа уже работают. Страница подбора полностью функциональна, её можно проверить прямо сейчас.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="container site-footer__inner">
+      <p class="site-footer__mark">Paradox<span class="brand__dot" aria-hidden="true"></span></p>
+      <p class="site-footer__meta">Вопросы и ответы · <a href="index.html">на главную</a> · <a href="privacy.html">политика</a> · <a href="terms.html">условия</a></p>
+    </div>
+  </footer>
+  <script src="file-guard.js" defer></script>
+</body>
+</html>

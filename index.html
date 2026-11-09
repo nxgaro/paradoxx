@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradox — первая работа из первой задачи</title>
+  <meta name="description" content="Paradox разрывает круг «без опыта нет работы, без работы нет опыта»: реальные задачи малого бизнеса Казахстана для студентов, с ИИ-мэтчингом и верифицированным портфолио.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top">
+        <span class="brand__name">Paradox</span><span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__tag">разрываем круг опыта</span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="#problem">Проблема</a>
+        <a href="#solution">Решение</a>
+        <a href="#how">Как работает</a>
+        <a href="#market">Бизнес-модель</a>
+        <a href="login.html" class="site-nav__auth" id="auth-link">Войти</a>
+        <a href="#democs" class="site-nav__cta">Демо</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__text">
+            <p class="kicker reveal">Хакатон · Digital Economy &amp; Future Tech · Казахстан</p>
+            <h1 class="hero__title reveal">
+              Без опыта нет работы.<br>
+              Без работы <em>нет опыта</em>.
+            </h1>
+            <p class="hero__lead reveal">
+              <em>Paradox</em> — потому что этот круг и есть парадокс: реальные задачи малого
+              бизнеса Казахстана, разложенные ИИ на куски по 2–20 часов, выполняются студентами
+              ещё до первого найма — и превращаются в верифицированное портфолио вместо пункта «опыт».
+            </p>
+            <div class="hero__actions reveal">
+              <a class="btn btn--primary" href="#demo">Проверить мэтчинг</a>
+              <a class="btn btn--secondary" href="#how">Как это работает</a>
+            </div>
+          </div>
+
+          <figure class="hero__loop reveal" aria-label="Схема: круг «нет опыта — нет работы» разрезается первой задачей">
+            <svg viewBox="0 0 480 480" role="img" focusable="false">
+              <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0 0 L10 5 L0 10 z" class="loop-arrowhead"></path>
+                </marker>
+              </defs>
+              <circle class="loop-circle" cx="240" cy="240" r="168" pathLength="100"></circle>
+              <g class="loop-node">
+                <circle cx="240" cy="72" r="4"></circle>
+                <text x="240" y="48" text-anchor="middle">нет работы: «нужен опыт»</text>
+              </g>
+              <g class="loop-node">
+                <circle cx="385.5" cy="324" r="4"></circle>
+                <text x="385.5" y="354" text-anchor="middle">нет опыта</text>
+              </g>
+              <g class="loop-node">
+                <circle cx="94.5" cy="324" r="4"></circle>
+                <text x="94.5" y="354" text-anchor="middle">нет портфолио</text>
+              </g>
+              <line class="loop-flow" x1="385.6" y1="156" x2="365.5" y2="121.4" marker-end="url(#arrow)"></line>
+              <line class="loop-flow" x1="240" y1="408" x2="280" y2="408" marker-end="url(#arrow)"></line>
+              <line class="loop-flow" x1="94.5" y1="156" x2="74.5" y2="190.6" marker-end="url(#arrow)"></line>
+              <line class="loop-cut" x1="96" y1="384" x2="384" y2="96"></line>
+              <g class="loop-break">
+                <text x="240" y="236" text-anchor="middle">точка входа</text>
+                <text class="loop-break__accent" x="240" y="276" text-anchor="middle">одна задача</text>
+              </g>
+            </svg>
+            <figcaption class="hero__loop-caption">Круг разрывается одной короткой задачей — подробнее в <a href="#solution">решении</a></figcaption>
+          </figure>
+        </div>
+
+        <dl class="hero__stats reveal">
+          <div class="stat">
+            <dt class="stat__label">студентов в пилоте</dt>
+            <dd class="stat__value">214</dd>
+            <dd class="stat__note">Алматы и Астана, опрос команды, октябрь 2025</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat__label">искали первую работу дольше 6 мес.</dt>
+            <dd class="stat__value">71%</dd>
+            <dd class="stat__note">из 214 опрошенных</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat__label">без единого реального проекта</dt>
+            <dd class="stat__value">63%</dd>
+            <dd class="stat__note">резюме заполнено, портфолио — нет</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat__label">МСБ не держит наставника для джунов</dt>
+            <dd class="stat__value">11/15</dd>
+            <dd class="stat__note">студий и агентств, глубинные интервью</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- MANIFESTO (full-bleed, единственный тёмный момент страницы) -->
+    <section class="manifesto">
+      <div class="container">
+        <blockquote class="manifesto__quote reveal">
+          <p>Работодателю не нужен «опыт».<br>Ему нужен <em>результат</em>.
+          Опыт — это просто архив результатов, который у выпускника пока пуст.</p>
+        </blockquote>
+        <p class="manifesto__meta reveal">— рабочая гипотеза «Paradox», проверяемая на пилоте из 8 задач</p>
+      </div>
+    </section>
+
+    <!-- PROBLEM: meta-column layout -->
+    <section class="problem section" id="problem">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker reveal">01 / проблемная зона</p>
+          <h2 class="section__title reveal">Разрыв между образованием и рынком</h2>
+        </div>
+
+        <div class="meta-grid">
+          <div class="meta-col reveal">
+            <h3 class="meta-col__label">Кто застревает</h3>
+          </div>
+          <div class="meta-col reveal">
+            <ul class="persona-list">
+              <li>
+                <p class="persona-list__who">Дана, выпускница ИТ-вуза</p>
+                <p>Знает SQL и Python, защитила диплом — но в резюме нет ни одной строки о специальности.</p>
+              </li>
+              <li>
+                <p class="persona-list__who">Айдар, выпускник колледжа</p>
+                <p>12 отправленных заявок на junior-разработчика. Ответ на все: «требуется опыт от 1 года».</p>
+              </li>
+              <li>
+                <p class="persona-list__who">Стоматология, 4 сотрудника, Астана</p>
+                <p>Нужна мини-CRM для записей. Джуна обучать некому, фрилансеру не доверяют.</p>
+              </li>
+              <li>
+                <p class="persona-list__who">IT-студия, 7 человек, Алматы</p>
+                <p>Наставник для джуна — это минус 5 часов сеньора в день. Дороже, чем польза.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="meta-grid meta-grid--flip">
+          <div class="meta-col reveal">
+            <h3 class="meta-col__label">Почему круг не размыкается</h3>
+          </div>
+          <div class="meta-col reveal">
+            <ol class="gap-list">
+              <li>
+                <span class="gap-list__num">а.</span>
+                <p><strong>Вакансии требуют опыт</strong> — а сама вакансия для студента и есть единственный легальный источник этого опыта.</p>
+              </li>
+              <li>
+                <span class="gap-list__num">б.</span>
+                <p><strong>Учебные проекты — не рынок.</strong> Работодатель не может проверить «домашку» в продакшене: нет клиента, нет дедлайна, нет денег, нет ответственности.</p>
+              </li>
+              <li>
+                <span class="gap-list__num">в.</span>
+                <p><strong>МСБ не может обучать.</strong> Малая компания платит за задачи, а не за рост сотрудника, и не может выделить наставника на 20 часов в неделю.</p>
+              </li>
+            </ol>
+            <p class="gap-note">Существующие программы (стажировки, «Первый диплом», гранты) помогают начать карьеру, но не решают фундаментальную задачу: <em>откуда взять первый результат, который можно предъявить.</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION: 7/5 split, flipped from hero -->
+    <section class="solution section" id="solution">
+      <div class="container">
+        <div class="split split--7-5">
+          <div class="split__text">
+            <p class="kicker reveal">02 / решение</p>
+            <h2 class="section__title reveal">Задача как точка входа в профессию</h2>
+            <p class="split__lead reveal">
+              Мы не создаём «ещё одну вакансию для джунов». Мы режем работу, которая
+              <em>и так существует</em> у малого бизнеса, на задачи, посильные для новичка.
+            </p>
+            <ul class="feature-list reveal">
+              <li>
+                <h3>ИИ-декомпозер</h3>
+                <p>Бизнес описывает боль обычным языком («записи теряются, клиенты не приходят»). LLM раскладывает её на scoped-задачи по 2–20 часов с чек-листом приёмки.</p>
+              </li>
+              <li>
+                <h3>Мэтчинг навыков</h3>
+                <p>Резюме и учебные проекты студента превращаются в профиль навыков. Подбор идёт по близости профиля к задаче, а не по формату «стажировки».</p>
+              </li>
+              <li>
+                <h3>Паспорт Paradox</h3>
+                <p>Каждая закрытая задача верифицируется заказчиком и попадает в портфельный паспорт: задача, артефакт, отзыв, часы. Получается проверяемый референс, а не «домашка» в списке работ.</p>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="split__side reveal">
+            <article class="file-card" aria-label="Пример карточки задачи">
+              <header class="file-card__head">
+                <span class="file-card__kind" aria-hidden="true">задача</span>
+                <span class="file-card__time">14 ч</span>
+              </header>
+              <h4>Телеграм-запись в барбершоп «Кесу»</h4>
+              <p class="file-card__body">Клиенты записываются по WhatsApp и теряются. Нужен бот: выбор мастера, слот, напоминание за 2 часа.</p>
+              <dl class="file-card__meta">
+                <div><dt>город</dt><dd>Алматы</dd></div>
+                <div><dt>бюджет</dt><dd>30 000 ₸</dd></div>
+                <div><dt>приёмка</dt><dd>бот живой, список из 3 записей</dd></div>
+              </dl>
+            </article>
+            <p class="split__side-note">Мини-размер задачи оправдан рынком: малый бизнес купил бы у фрилансера ровно такой объём, но не мог позволить себе проверить на новичке.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS: editorial index -->
+    <section class="how section" id="how">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker reveal">03 / механика</p>
+          <h2 class="section__title reveal">Четыре шага</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title">Бизнес описывает боль</h3>
+            <p>Владелец пекарни или стоматологии заполняет форму на человеческом языке — без ТЗ на 20 страниц и без менеджера посередине.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title">ИИ режет на задачи</h3>
+            <p>Декомпозер выделяет 2–6 scoped-задач: объём в часах, навыки, чек-лист приёмки. Человеку-модератору остаётся сверка на здравый смысл.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title">Мэтчинг со студентами</h3>
+            <p>Профиль навыков студента сравнивается с задачей. Студенты видят не «подходит / не подходит», а процент совпадения и список навыков, которых не хватает.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">04</span>
+            <h3 class="step__title">Результат = портфолио</h3>
+            <p>Закрытая задача попадает в «Паспорт Paradox» с артефактом и верификацией бизнеса. Следующий работодатель видит работу, а не самооценку.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA: подбор задачи на отдельной странице -->
+    <section class="demo section" id="demo">
+      <div class="container" id="democs">
+        <div class="section__head">
+          <p class="kicker reveal">04 / демо MVP</p>
+          <h2 class="section__title reveal">Попробуйте подбор задачи</h2>
+          <p class="section__lead reveal">Отметьте свои навыки — модель сверит их с реальными задачами малого бизнеса из пилота и покажет процент совпадения. Подбор доступен после входа.</p>
+          <div class="demo-cta reveal">
+            <a class="btn btn--primary" href="match.html">Открыть подбор</a>
+            <a class="btn btn--secondary" href="login.html">Войти или создать аккаунт</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUSINESS MODEL: mono table -->
+    <section class="market section section--split" id="market">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker reveal">05 / экономика</p>
+          <h2 class="section__title reveal">Каждая сторона платит за своё</h2>
+        </div>
+        <div class="market__grid">
+          <div class="table-scroll reveal">
+            <table class="market-table">
+            <caption>Экономика модели на пилоте</caption>
+            <thead>
+              <tr><th scope="col">Статья</th><th scope="col">Кто платит</th><th scope="col">Цена</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Публикация задачи</td><td>МСП</td><td>бесплатно</td></tr>
+              <tr><td>Сервисный сбор за закрытую задачу</td><td>МСП</td><td>10% бюджета</td></tr>
+              <tr><td>«Паспорт Paradox»</td><td>студент</td><td>бесплатно навсегда</td></tr>
+              <tr><td>Подписка МСП: пул кандидатов + аналитика</td><td>МСП</td><td>14 900 ₸ / мес</td></tr>
+              <tr><td>Средний чек задачи (пилот)</td><td>—</td><td>35 000 ₸</td></tr>
+              <tr><td>Средний срок закрытия (пилот)</td><td>—</td><td>9 дней</td></tr>
+            </tbody>
+            </table>
+          </div>
+
+          <aside class="market__aside reveal">
+            <h3 class="market__aside-label">Почему это работает</h3>
+            <ul class="plain-list">
+              <li>Компания платит только за сделанную работу — как за фриланс, но с шансом найти джуна в штат.</li>
+              <li>Студент получает деньги и референс сразу — вместо «стажировки без оплаты».</li>
+              <li>Платформа зарабатывает с оборота, поэтому заинтересована в количестве закрытых задач, а не в «продаже курса».</li>
+            </ul>
+            <p class="market__calc">Юнит-экономика одной задачи: 35 000 ₸ × 10% = <strong>3 500 ₸</strong> маржи. 1 000 задач в месяц по Казахстану = 3,5 млн ₸.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK & TEAM -->
+    <section class="team section" id="team">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker reveal">06 / команда и стек</p>
+          <h2 class="section__title reveal">Что под капотом</h2>
+        </div>
+        <div class="meta-grid">
+          <div class="meta-col reveal">
+            <h3 class="meta-col__label">Стек</h3>
+          </div>
+          <div class="meta-col reveal">
+            <ul class="stack-list">
+              <li><span>фронтенд</span>HTML, CSS, vanilla JS — сайт работает без сборки и сетевых зависимостей</li>
+              <li><span>мэтчинг</span>TF-IDF-векторизация профиля навыков и задач, косинусная близость + бонусы за область</li>
+              <li><span>в проде</span>PostgreSQL + pgvector, LLM-декомпозер задач, модерация человеком</li>
+              <li><span>деплой</span>статический хостинг, live-версия — по ссылке в описании проекта</li>
+            </ul>
+          </div>
+        </div>
+        <div class="meta-grid meta-grid--flip">
+          <div class="meta-col reveal">
+            <h3 class="meta-col__label">Команда</h3>
+          </div>
+          <div class="meta-col reveal">
+            <ul class="persona-list persona-list--compact">
+              <li><p class="persona-list__who">Ансар — бэкенд, фронтенд, лидер</p></li>
+              <li><p class="persona-list__who">Наиль — фронтенд</p></li>
+              <li><p class="persona-list__who">Эльдар — бэкенд</p></li>
+              <li><p class="persona-list__who">Нелли — дизайн</p></li>
+              <li><p class="persona-list__who">Инкара — монтаж</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__mark">Paradox<span class="brand__dot" aria-hidden="true"></span></p>
+      <p class="site-footer__meta">Кейс «The Experience Gap» · трек Digital Economy &amp; Future Tech · хакатон, ноябрь 2026</p>
+      <p class="site-footer__meta">Имена компаний в деме вымышлены, цифры пилота — данные команды</p>
+    </div>
+  </footer>
+
+  <script src="file-guard.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="auth-nav.js" defer></script>
+</body>
+</html>

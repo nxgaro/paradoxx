@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет — Paradox</title>
+  <meta name="description" content="Личный кабинет Paradox: задачи, отклики и управление ролями.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Paradox</span><span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__tag">разрываем круг опыта</span>
+      </a>
+      <nav class="site-nav site-nav--dashboard" aria-label="Навигация кабинета">
+        <a href="index.html">Главная</a>
+        <span class="user-chip" id="header-user" hidden></span>
+        <button type="button" class="btn btn--secondary btn--small" id="logout-button" hidden>Выйти</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="dash-page">
+    <div class="container">
+      <header class="dash-head">
+        <div>
+          <p class="kicker">Личный кабинет</p>
+          <h1 class="dash-title">Привет, <span id="dash-name">…</span></h1>
+          <p class="dash-subtitle" id="dash-role">Загружаем профиль…</p>
+        </div>
+        <div class="dash-head__actions" id="dash-actions"></div>
+      </header>
+
+      <div class="dash-stats" id="dash-stats" aria-label="Краткая статистика"></div>
+
+      <div class="dash-tabs" id="dash-tabs" role="tablist" aria-label="Разделы кабинета"></div>
+      <section class="dash-panel" id="dash-panel" aria-live="polite">
+        <p class="dash-loading">Загружаем данные…</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="container site-footer__inner">
+      <p class="site-footer__mark">Paradox<span class="brand__dot" aria-hidden="true"></span></p>
+      <p class="site-footer__meta">Задачи, роли и отклики · <a href="index.html">на главную</a></p>
+    </div>
+  </footer>
+
+  <!-- Детали задачи -->
+  <dialog class="dialog dialog--wide" id="task-dialog" aria-labelledby="task-dialog-title">
+    <button type="button" class="dialog__close" data-close-dialog="task-dialog" aria-label="Закрыть">×</button>
+    <div id="task-dialog-body"></div>
+  </dialog>
+
+  <!-- Создание задачи -->
+  <dialog class="dialog" id="create-dialog" aria-labelledby="create-dialog-title">
+    <button type="button" class="dialog__close" data-close-dialog="create-dialog" aria-label="Закрыть">×</button>
+    <div class="dialog__head">
+      <p class="kicker">Новая задача</p>
+      <h2 class="dialog__title" id="create-dialog-title">Создать задачу</h2>
+      <p class="dialog__lead">Опишите боль человеческим языком. После публикации задача появится у пользователей и в демо-мэтчинге.</p>
+    </div>
+
+    <form class="form-grid" id="create-form" novalidate>
+      <div class="field field--full">
+        <label class="field__label" for="task-title">Название задачи</label>
+        <input class="field__input" id="task-title" name="title" type="text" required minlength="3"
+               placeholder="Например: Телеграм-бот записи в барбершоп">
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-company">Компания / заказчик</label>
+        <input class="field__input" id="task-company" name="company" type="text" required minlength="2"
+               placeholder="Название компании">
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-area">Сфера</label>
+        <select class="field__input" id="task-area" name="area">
+          <option value="IT">IT</option>
+          <option value="Дизайн">Дизайн</option>
+          <option value="Аналитика">Аналитика</option>
+          <option value="Медиа">Медиа</option>
+          <option value="Другое">Другое</option>
+        </select>
+      </div>
+
+      <div class="field field--full">
+        <label class="field__label" for="task-description">Что нужно сделать</label>
+        <textarea class="field__input field__input--textarea" id="task-description" name="description"
+                  rows="5" required minlength="10"
+                  placeholder="Опишите проблему и ожидаемый результат. Без ТЗ на 20 страниц."></textarea>
+      </div>
+
+      <div class="field field--full">
+        <label class="field__label" for="task-skills">Навыки <span class="field__hint">— через запятую</span></label>
+        <input class="field__input" id="task-skills" name="skills" type="text"
+               placeholder="Python, SQL, Figma">
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-hours">Объём, часов</label>
+        <input class="field__input" id="task-hours" name="hours" type="number" min="1" max="200" value="8" required>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-budget">Бюджет, ₸</label>
+        <input class="field__input" id="task-budget" name="budget" type="number" min="0" max="10000000" step="1000" value="30000" required>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="task-deadline">Дедлайн <span class="field__hint">— необязательно</span></label>
+        <input class="field__input" id="task-deadline" name="deadline" type="date">
+      </div>
+
+      <p class="form-message field--full" id="create-message" role="alert" hidden></p>
+
+      <div class="dialog__actions field--full">
+        <button type="button" class="btn btn--secondary" data-close-dialog="create-dialog">Отмена</button>
+        <button type="submit" class="btn btn--primary">Опубликовать задачу</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Отклики на задачу -->
+  <dialog class="dialog dialog--wide" id="apps-dialog" aria-labelledby="apps-dialog-title">
+    <button type="button" class="dialog__close" data-close-dialog="apps-dialog" aria-label="Закрыть">×</button>
+    <div class="dialog__head">
+      <p class="kicker">Отклики</p>
+      <h2 class="dialog__title" id="apps-dialog-title">Кандидаты</h2>
+    </div>
+    <div id="apps-dialog-body"></div>
+  </dialog>
+
+  <!-- Смена пароля -->
+  <dialog class="dialog" id="password-dialog" aria-labelledby="password-dialog-title">
+    <button type="button" class="dialog__close" data-close-dialog="password-dialog" aria-label="Закрыть">×</button>
+    <div class="dialog__head">
+      <p class="kicker">Безопасность</p>
+      <h2 class="dialog__title" id="password-dialog-title">Сменить пароль</h2>
+    </div>
+    <form class="form-grid" id="password-form" novalidate>
+      <div class="field field--full">
+        <label class="field__label" for="current-password">Текущий пароль</label>
+        <input class="field__input" id="current-password" name="currentPassword" type="password"
+               autocomplete="current-password" required>
+      </div>
+      <div class="field field--full">
+        <label class="field__label" for="new-password">Новый пароль</label>
+        <input class="field__input" id="new-password" name="newPassword" type="password"
+               autocomplete="new-password" minlength="8" required placeholder="Минимум 8 символов">
+      </div>
+      <p class="form-message field--full" id="password-message" role="alert" hidden></p>
+      <div class="dialog__actions field--full">
+        <button type="button" class="btn btn--secondary" data-close-dialog="password-dialog">Отмена</button>
+        <button type="submit" class="btn btn--primary">Сохранить пароль</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast-stack" id="toasts" aria-live="polite"></div>
+
+  <script src="file-guard.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</body>
+</html>
